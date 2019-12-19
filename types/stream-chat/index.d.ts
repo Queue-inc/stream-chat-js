@@ -33,7 +33,7 @@ export interface Attachment {
 export interface Message {
   text: string;
   attachments?: Attachment[];
-  mentioned_users?: (User | string)[];
+  mentioned_users?: User[];
   parent_id?: string;
   [propName: string]: any;
 }
