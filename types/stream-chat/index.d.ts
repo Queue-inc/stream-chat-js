@@ -280,7 +280,7 @@ export class Channel {
   state: ChannelState;
 
   getConfig(): object;
-  sendMessage(message: Message): Promise<SendMessageAPIResponse>;
+  sendMessage(message: Message | any): Promise<SendMessageAPIResponse>;
   sendFile(
     uri: string,
     name?: string,

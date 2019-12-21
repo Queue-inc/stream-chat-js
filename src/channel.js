@@ -82,14 +82,7 @@ export class Channel {
 
 	async sendMessage(message) {
 		return await this.getClient().post(this._channelURL() + '/message', {
-			message: {
-				text: message.text,
-				mentioned_users: message.mentioned_users ? message.mentioned_users.map((user) => user.id) : [],
-				attachments: message.attachments ? message.attachments : null,
-				research_id: message.research_id ? message.research_id : null,
-				company_name: message.company_name ? message.company_name : null,
-				summary: message.summary ? summary : null,
-			}
+			message,
 		});
 	}
 
