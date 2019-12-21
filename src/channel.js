@@ -81,9 +81,6 @@ export class Channel {
 	 */
 
 	async sendMessage(message) {
-		if (message.mentioned_users) {
-			message.mentioned_users = message.mentioned_users.map((user) => user.id);
-		}
 		return await this.getClient().post(this._channelURL() + '/message', {
 			message: {
 				text: message.text,
